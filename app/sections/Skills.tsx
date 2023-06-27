@@ -2,12 +2,15 @@ import Image from "next/image";
 
 export default function Skills() {
   return (
-    <section id="skills" className="container grid gap-8 px-6 py-20">
+    <section
+      id="skills"
+      className="container grid gap-8 px-6 py-20 lg:gap-12 lg:py-24"
+    >
       <div>
         <h2 className="text-lg font-bold uppercase text-blue-500">Skills</h2>
       </div>
 
-      <div className="grid grid-cols-5 items-center gap-8">
+      <div className="grid grid-cols-5 items-center gap-8 lg:px-8">
         <Image
           width={200}
           height={200}

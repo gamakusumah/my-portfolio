@@ -5,7 +5,10 @@ import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
   return (
-    <section id="projects" className="container grid gap-8 px-6 py-20">
+    <section
+      id="projects"
+      className="container grid gap-8 px-6 py-20 lg:gap-12 lg:py-24"
+    >
       {/* Headline and subheadline */}
       <div>
         <h2 className="mb-3 text-lg font-bold uppercase text-blue-500">
@@ -17,7 +20,7 @@ export default function Projects() {
       </div>
 
       {/* Project Card */}
-      <div className="grid gap-14">
+      <div className="grid gap-14 md:gap-16 lg:gap-20 lg:px-8">
         <ProjectCard
           name="NFT Marketplace"
           designer="Anima"
@@ -29,6 +32,7 @@ export default function Projects() {
           cta="View Demo"
           imgSrc="/projects/nft.png"
           caption={null}
+          imgOrder={null}
         />
         <ProjectCard
           name="Jasa Prima"
@@ -40,6 +44,7 @@ export default function Projects() {
           cta="Visit Website"
           imgSrc="/projects/jp.png"
           caption='No. 1 on the Google SERP with keyword "biro jasa bandung"'
+          imgOrder={2}
         />
         <ProjectCard
           name="NFT Marketplace"
@@ -52,6 +57,7 @@ export default function Projects() {
           cta="View Demo"
           imgSrc="/projects/nft.png"
           caption={null}
+          imgOrder={null}
         />
       </div>
     </section>

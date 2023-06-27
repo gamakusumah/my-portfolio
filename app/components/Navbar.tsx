@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="flex h-16 w-full items-center justify-center bg-white px-6"
+      className="flex h-16 w-full items-center justify-center bg-white px-6 lg:justify-between"
       id="navbar"
     >
       {/* Logo */}
@@ -49,7 +49,7 @@ export default function Navbar() {
         </button>
 
         <div
-          className={`ease-in-ou absolute w-48 rounded-2xl border bg-white px-4 transition-all duration-500 lg:static lg:w-auto lg:bg-transparent lg:py-0 ${
+          className={`ease-in-ou absolute w-48 rounded-2xl border bg-white px-4 transition-all duration-500 lg:static lg:w-auto lg:border-none lg:bg-transparent lg:py-0 ${
             isOpen ? "right-2" : "-right-48"
           }`}
         >

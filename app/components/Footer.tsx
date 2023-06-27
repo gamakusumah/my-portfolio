@@ -2,15 +2,17 @@ import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export default function Footer() {
   return (
-    <footer className="container grid gap-3 bg-text px-6 py-4">
-      <p className="text-sm text-white">
-        Copyrights © 2023. All rights are reserved
-      </p>
-      {/* Social Media */}
-      <div className="flex space-x-4">
-        <AiFillLinkedin size={36} className="fill-white" />
-        <AiFillGithub size={36} className="fill-white" />
-        <AiFillInstagram size={36} className="fill-white" />
+    <footer className="bg-text py-8">
+      <div className="container px-6 md:flex md:items-center md:justify-between">
+        <p className="mb-4 text-sm text-white md:mb-0">
+          Copyrights © 2023. All rights are reserved
+        </p>
+        {/* Social Media */}
+        <div className="flex space-x-4">
+          <AiFillLinkedin size={36} className="fill-white" />
+          <AiFillGithub size={36} className="fill-white" />
+          <AiFillInstagram size={36} className="fill-white" />
+        </div>
       </div>
     </footer>
   );

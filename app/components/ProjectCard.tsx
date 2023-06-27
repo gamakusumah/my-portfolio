@@ -12,12 +12,17 @@ interface CardProp {
   imgSrc: string;
   link: string;
   caption: string | null;
+  imgOrder: number | null;
 }
 
 export default function ProjectCard(prop: CardProp) {
   return (
-    <div className="grid gap-5">
-      <div className="h-52 w-full overflow-hidden rounded-2xl">
+    <div className="grid gap-5 md:grid-cols-2">
+      <div
+        className={`h-52 w-full overflow-hidden rounded-2xl border md:h-[318px] ${
+          prop.imgOrder !== null ? `md:order-${prop.imgOrder}` : null
+        }`}
+      >
         <Image
           src={prop.imgSrc}
           width={200}
@@ -28,7 +33,7 @@ export default function ProjectCard(prop: CardProp) {
         />
       </div>
       {/* Information */}
-      <div className="grid gap-4">
+      <div className="grid gap-4 md:items-center lg:w-[330px] lg:justify-self-center lg:text-center">
         <div>
           <h4 className="text-lg font-bold uppercase">{prop.name}</h4>
           <p className="text-sm text-caption">
@@ -48,7 +53,7 @@ export default function ProjectCard(prop: CardProp) {
           <p className="text-sm text-caption">{prop.caption}</p>
         ) : null}
 
-        <ul className="flex space-x-3 font-bold">
+        <ul className="flex space-x-3 font-bold lg:mx-auto">
           {prop.tools.map((tool, i) => (
             <li key={i}>{tool}</li>
           ))}
@@ -59,7 +64,7 @@ export default function ProjectCard(prop: CardProp) {
           target="_blank"
           rel="noopener noreferrer"
           href={prop.link}
-          className="flex items-center justify-center rounded-xl border py-2 font-semibold hover:border-text"
+          className="flex h-10 place-content-end items-center justify-center rounded-xl border font-semibold hover:border-text"
         >
           {prop.cta}
           <HiOutlineExternalLink size={24} className="ml-2" />
