@@ -6,4 +6,7 @@
   * {
     @apply font-poppins text-text;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }

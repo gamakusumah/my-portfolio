@@ -1,8 +1,10 @@
+"use client";
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="hero" className="container grid gap-10 px-6 py-20">
+    <section id="hero" className="container grid gap-10 px-6 py-10">
       {/* Heading and subheading */}
       <div>
         <h1 className="mb-6 text-3xl font-black">Front-End React Developer</h1>

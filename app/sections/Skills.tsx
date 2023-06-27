@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Skills() {
   return (
-    <section className="container grid gap-8 px-6 py-20">
+    <section id="skills" className="container grid gap-8 px-6 py-20">
       <div>
         <h2 className="text-lg font-bold uppercase text-blue-500">Skills</h2>
       </div>

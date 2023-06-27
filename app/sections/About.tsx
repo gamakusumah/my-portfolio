@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="container grid gap-8 px-6 py-20">
+    <section className="container grid gap-8 px-6 py-20" id="about">
       {/* Headline and subheadline */}
       <div>
         <h2 className="mb-3 text-lg font-bold uppercase text-blue-500">
