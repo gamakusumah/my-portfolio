@@ -10,11 +10,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className="flex h-16 w-full items-center justify-center bg-white px-6 lg:justify-between"
+      className="flex h-16 w-full items-center justify-center bg-white px-6 md:px-12 lg:justify-between lg:px-24"
       id="navbar"
     >
       {/* Logo */}
-      <Link href="/" className="font-poppins text-lg font-bold">
+      <Link href="/" className="font-poppins text-lg font-bold lg:text-xl">
         Gama
       </Link>
       {/* <button>
@@ -22,7 +22,7 @@ export default function Navbar() {
       </button> */}
 
       {/* Menu */}
-      <div className="fixed right-0 top-1/2 flex items-center lg:static lg:h-16">
+      <div className="fixed right-0 top-1/2 z-20 flex items-center lg:static lg:h-16">
         <button
           className={`absolute right-2 flex appearance-none items-center justify-center rounded-3xl border bg-white p-2 transition-all duration-500 ease-in-out hover:border-caption lg:hidden ${
             isOpen ? "right-52" : "right-2"
@@ -49,7 +49,7 @@ export default function Navbar() {
         </button>
 
         <div
-          className={`ease-in-ou absolute w-48 rounded-2xl border bg-white px-4 transition-all duration-500 lg:static lg:w-auto lg:border-none lg:bg-transparent lg:py-0 ${
+          className={`ease-in-ou absolute w-48 rounded-2xl border bg-white px-4 transition-all duration-500 lg:static lg:w-auto lg:border-none lg:bg-transparent lg:px-0 lg:py-0 ${
             isOpen ? "right-2" : "-right-48"
           }`}
         >

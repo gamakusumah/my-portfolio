@@ -17,7 +17,7 @@ interface CardProp {
 
 export default function ProjectCard(prop: CardProp) {
   return (
-    <div className="grid gap-5 md:grid-cols-2">
+    <div className="grid gap-5 md:grid-cols-2 md:gap-6">
       <div
         className={`h-52 w-full overflow-hidden rounded-2xl border md:h-[318px] ${
           prop.imgOrder !== null ? `md:order-${prop.imgOrder}` : null
@@ -25,15 +25,15 @@ export default function ProjectCard(prop: CardProp) {
       >
         <Image
           src={prop.imgSrc}
-          width={200}
-          height={200}
+          width={1366}
+          height={2000}
           className="h-auto w-full"
           alt={`${prop.name} Image`}
           quality={100}
         />
       </div>
       {/* Information */}
-      <div className="grid gap-4 md:items-center lg:w-[330px] lg:justify-self-center lg:text-center">
+      <div className="grid gap-4 md:items-center md:justify-self-center md:text-center lg:w-[330px]">
         <div>
           <h4 className="text-lg font-bold uppercase">{prop.name}</h4>
           <p className="text-sm text-caption">
@@ -53,7 +53,7 @@ export default function ProjectCard(prop: CardProp) {
           <p className="text-sm text-caption">{prop.caption}</p>
         ) : null}
 
-        <ul className="flex space-x-3 font-bold lg:mx-auto">
+        <ul className="flex space-x-3 font-bold md:mx-auto">
           {prop.tools.map((tool, i) => (
             <li key={i}>{tool}</li>
           ))}

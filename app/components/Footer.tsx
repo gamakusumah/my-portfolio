@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export default function Footer() {
@@ -9,9 +10,12 @@ export default function Footer() {
         </p>
         {/* Social Media */}
         <div className="flex space-x-4">
-          <AiFillLinkedin size={36} className="fill-white" />
-          <AiFillGithub size={36} className="fill-white" />
-          <AiFillInstagram size={36} className="fill-white" />
+          <Link href="https://www.linkedin.com/in/gama-kusumah">
+            <AiFillLinkedin size={36} className="fill-white" />
+          </Link>
+          <Link href="https://github.com/gamakusumah">
+            <AiFillGithub size={36} className="fill-white" />
+          </Link>
         </div>
       </div>
     </footer>

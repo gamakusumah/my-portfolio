@@ -19,7 +19,7 @@ module.exports = {
       },
       colors: {
         text: "#171717",
-        prim: "#FFB400",
+        prim: "#5A96E3",
         caption: "#767676",
       },
     },
