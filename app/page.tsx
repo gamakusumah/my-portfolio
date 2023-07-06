@@ -1,3 +1,5 @@
+"use client";
+
 import About from "./sections/About";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
@@ -6,7 +8,7 @@ import Contact from "./sections/Contact";
 
 export default function Home() {
   return (
-    <main>
+    <main className="lg:pt-16">
       <Hero />
       <About />
       <Skills />

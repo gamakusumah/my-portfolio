@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+import { motion } from "framer-motion";
+import { container, item } from "@/app/animations";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
 interface CardProp {
@@ -17,9 +18,16 @@ interface CardProp {
 
 export default function ProjectCard(prop: CardProp) {
   return (
-    <div className="grid gap-5 md:grid-cols-2 md:gap-6">
-      <div
-        className={`h-52 w-full overflow-hidden rounded-2xl border md:h-[318px] ${
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      id="projects"
+      className="grid gap-5 md:grid-cols-2 md:items-center md:gap-6"
+    >
+      <motion.div
+        variants={item}
+        className={`h-52 w-full overflow-hidden rounded-2xl border lg:h-[318px] ${
           prop.imgOrder !== null ? `md:order-${prop.imgOrder}` : null
         }`}
       >
@@ -31,12 +39,14 @@ export default function ProjectCard(prop: CardProp) {
           alt={`${prop.name} Image`}
           quality={100}
         />
-      </div>
+      </motion.div>
       {/* Information */}
       <div className="grid gap-4 md:items-center md:justify-self-center md:text-center lg:w-[330px]">
         <div>
-          <h4 className="text-lg font-bold uppercase">{prop.name}</h4>
-          <p className="text-sm text-caption">
+          <motion.h4 variants={item} className="text-lg font-bold uppercase">
+            {prop.name}
+          </motion.h4>
+          <motion.p variants={item} className="text-sm text-caption">
             Design by{" "}
             <a
               target="_blank"
@@ -46,21 +56,26 @@ export default function ProjectCard(prop: CardProp) {
             >
               {prop.designer}
             </a>
-          </p>
+          </motion.p>
         </div>
-        <p>{prop.desc}</p>
+        <motion.p variants={item}>{prop.desc}</motion.p>
         {prop.caption !== null ? (
-          <p className="text-sm text-caption">{prop.caption}</p>
+          <motion.p variants={item} className="text-sm text-caption">
+            {prop.caption}
+          </motion.p>
         ) : null}
 
-        <ul className="flex space-x-3 font-bold md:mx-auto">
+        <ul className="flex font-bold md:mx-auto">
           {prop.tools.map((tool, i) => (
-            <li key={i}>{tool}</li>
+            <motion.li variants={item} key={i} className="mr-3">
+              {tool}
+            </motion.li>
           ))}
         </ul>
 
         {/* Buttons */}
-        <a
+        <motion.a
+          variants={item}
           target="_blank"
           rel="noopener noreferrer"
           href={prop.link}
@@ -68,8 +83,8 @@ export default function ProjectCard(prop: CardProp) {
         >
           {prop.cta}
           <HiOutlineExternalLink size={24} className="ml-2" />
-        </a>
+        </motion.a>
       </div>
-    </div>
+    </motion.div>
   );
 }

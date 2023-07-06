@@ -1,7 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { HiOutlineExternalLink } from "react-icons/hi";
 import ProjectCard from "../components/ProjectCard";
+import { motion } from "framer-motion";
+import { item } from "@/app/animations";
 
 export default function Projects() {
   return (
@@ -10,12 +9,17 @@ export default function Projects() {
       className="container grid gap-8 px-6 py-20 lg:gap-12 lg:py-24"
     >
       {/* Headline and subheadline */}
-      <div>
+      <motion.div
+        variants={item}
+        initial="hidden"
+        whileInView="visible"
+        id="projects"
+      >
         <h2 className="mb-3 text-lg font-bold uppercase text-prim">Projects</h2>
         {/* <h3 className="text-2xl font-bold">
           Each project is a uniqe place of development
         </h3> */}
-      </div>
+      </motion.div>
 
       {/* Project Card */}
       <div className="grid gap-14 px-2 md:gap-16 md:px-4 lg:gap-28 lg:px-8">
@@ -36,7 +40,7 @@ export default function Projects() {
           designer="SAYA"
           designerLink="/"
           link="https://jasaprima.co.id/"
-          desc="A Service Bureau website that serves the renewal of STNK and others, with online services and document pick-ups in surrounding Bandung."
+          desc="A Service Bureau website that serves the renewal of STNK and others, with online services and document pick-ups in Bandung."
           tools={["Bootstrap", "CI3"]}
           cta="Visit Website"
           imgSrc="/projects/jp.png"
@@ -49,7 +53,7 @@ export default function Projects() {
           designerLink="/"
           link="https://drive.google.com/file/d/1gu3JstvVqo-DDpuVmCYiq9SPCFn20FxE/view0"
           desc="A Jasa Prima Admin Dashboard for administrative management of office and orders data."
-          tools={["React.js", "TailwindCSS", "MongoDB", "Express.js"]}
+          tools={["MERN", "Tailwind"]}
           cta="View Demo"
           imgSrc="/projects/jpd2.png"
           caption={null}
