@@ -34,7 +34,7 @@ export default function About() {
         A Junior Front-end Web Developer with experience designing and creating
         responsive websites in several fields since 2019. Proficient with
         TailwindCSS and ReactJS with the NextJS framework, as well as basic
-        knowledge of UX Design and website SEO experience.
+        knowledge of UX Design and SEO experience.
       </motion.p>
     </motion.section>
   );
