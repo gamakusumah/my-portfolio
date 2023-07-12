@@ -31,9 +31,9 @@ export default function About() {
         />
       </motion.div>
       <motion.p variants={item} className="text-justify md:order-3">
-        A Junior Front-end Web Developer with experience designing and creating
+        A Junior Frontend Web Developer with experience designing and creating
         responsive websites in several fields since 2019. Proficient with
-        TailwindCSS and ReactJS with the NextJS framework, as well as basic
+        TailwindCSS and React.js with the Next.js framework, as well as basic
         knowledge of UX Design and SEO experience.
       </motion.p>
     </motion.section>

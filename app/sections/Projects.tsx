@@ -53,7 +53,7 @@ export default function Projects() {
           designerLink="/"
           link="https://drive.google.com/file/d/1gu3JstvVqo-DDpuVmCYiq9SPCFn20FxE/view0"
           desc="A Jasa Prima Admin Dashboard for administrative management of office and orders data."
-          tools={["MERN", "Tailwind"]}
+          tools={["MERN Stack", "Tailwind"]}
           cta="View Demo"
           imgSrc="/projects/jpd2.png"
           caption={null}

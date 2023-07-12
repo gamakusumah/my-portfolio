@@ -19,11 +19,12 @@ export default function Hero() {
           variants={item}
           className="mb-6 text-3xl font-black md:text-4xl lg:text-5xl"
         >
-          Front-End React Developer
+          Hello! I'm <br />
+          Gama Kusumah
         </motion.h1>
         <motion.p variants={item} className="mb-6 w-[90%] text-caption">
-          Hello, I'm <span className="font-semibold">Gama Kusumah</span>. A
-          Front-end React developer based in Bandung, Indonesia.
+          A <span className="font-semibold">Frontend Web Developer</span> based
+          in Bandung, Indonesia.
         </motion.p>
         {/* Social Media */}
         <motion.div variants={item} className="flex space-x-4 md:order-3">
